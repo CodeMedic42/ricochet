@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2015",
+        "declaration": true,
+        "outDir": "./dist",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution":"node",
+        "esModuleInterop": true
+    },
+    "include": [
+      "./src/*"
+    ]
+}

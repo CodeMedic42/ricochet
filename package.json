@@ -1,0 +1,28 @@
+{
+  "name": "ricochet-js",
+  "version": "0.0.1",
+  "description": "A async module for the Recoil framework",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lerna run start --stream --scope=example-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeMedic42/ricochet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeMedic42/ricochet/issues"
+  },
+  "homepage": "https://github.com/CodeMedic42/ricochet#readme",
+  "devDependencies": {
+    "lerna": "^5.4.3"
+  }
+}

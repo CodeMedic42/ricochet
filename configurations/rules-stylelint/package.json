@@ -1,0 +1,10 @@
+{
+	"name": "@rules/stylelint-config",
+	"version": "0.1.33",
+	"main": "./index.js",
+	"private": true,
+	"dependencies": {
+		"stylelint-config-prettier": "latest",
+		"stylelint-config-standard": "latest"
+	}
+}

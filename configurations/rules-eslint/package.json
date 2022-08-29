@@ -1,0 +1,10 @@
+{
+	"name": "@rules/eslint-config",
+	"version": "1.0.0",
+	"main": "./index.js",
+	"private": true,
+	"dependencies": {
+		"eslint-config-airbnb-base": "latest",
+		"eslint-config-prettier": "latest"
+	}
+}

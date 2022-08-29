@@ -1,0 +1,140 @@
+{
+    "name": "example-client",
+    "version": "0.0.1",
+    "description": "A client application to showcase Ricochet.",
+    "private": false,
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "clean": "rimraf dist && rimraf build",
+        "build:styles": "node-sass ./src --output ./dist",
+        "build:js": "babel ./src --out-dir dist",
+        "build:app": "npm run clean && npm run build:js && npm run build:styles",
+        "start:run": "webpack serve --config ./webpack/webpack.development.js",
+        "start": "npm-run-all --parallel start:run watch",
+        "lint:stylelint": "stylelint \"./src/**/*.{css,scss,sass}\"",
+        "lint:eslint": "eslint --fix \"{.,src,webpack}/**/*.{js,jsx}\"",
+        "lint": "npm run lint:eslint",
+        "format": "prettier --write \"{.,src,webpack}/**/*.{js,jsx,json,md}\"",
+        "watch": "npm-watch"
+    },
+    "author": "Chris Micle <cam42.dev@outlook.com>",
+    "license": "ISC",
+    "browserslist": [
+        "> 0.25%",
+        "not dead"
+    ],
+    "babel": {
+        "extends": "@config/babel-config"
+    },
+    "eslintConfig": {
+        "extends": [
+            "@rules/eslint-config-react"
+        ]
+    },
+    "stylelint": {
+        "extends": [
+            "@rules/stylelint-config"
+        ]
+    },
+    "prettier": "@rules/prettier-config",
+    "watch": {
+        "build:js": {
+            "patterns": [
+                "src"
+            ],
+            "extensions": "js,jsx,json",
+            "ignore": "dist/",
+            "quiet": true,
+            "runOnChangeOnly": false
+        }
+    },
+    "engines": {
+        "node": ">=15",
+        "npm": ">=7"
+    },
+    "dependencies": {
+        "axios": "^0.27.2",
+        "axios-mock-adapter": "^1.21.2",
+        "classnames": "^2.3.1",
+        "core-js": "3.4.1",
+        "history": "4.10.1",
+        "lodash": "^4.17.21",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-hot-loader": "4.12.17",
+        "react-router-dom": "5.2.0",
+        "recoil": "^0.7.5",
+        "ricochet": "0.0.1"
+    },
+    "resolutions": {
+        "babel-core": "7.0.0-bridge.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "latest",
+        "@babel/core": "latest",
+        "@babel/eslint-plugin": "latest",
+        "@babel/node": "latest",
+        "@babel/preset-react": "latest",
+        "@babel/register": "latest",
+        "@babel/runtime": "latest",
+        "@config/babel-config": "^0.1.33",
+        "@hot-loader/react-dom": "^16.13.0",
+        "@rules/eslint-config-react": "^0.1.33",
+        "@rules/prettier-config": "^0.1.1",
+        "@rules/stylelint-config": "^0.1.33",
+        "@test/react-helper": "^0.1.1",
+        "@types/react": "latest",
+        "babel-core": "latest",
+        "babel-loader": "latest",
+        "browserslist": "latest",
+        "buffer": "latest",
+        "chai": "latest",
+        "clean-webpack-plugin": "latest",
+        "crypto-browserify": "latest",
+        "css-loader": "latest",
+        "css-minimizer-webpack-plugin": "latest",
+        "dotenv": "latest",
+        "enzyme": "latest",
+        "enzyme-adapter-react-16": "latest",
+        "eslint": "^7.32.0",
+        "eslint-loader": "latest",
+        "eslint-plugin-formatjs": "latest",
+        "eslint-plugin-import": "latest",
+        "eslint-plugin-jest": "latest",
+        "eslint-plugin-jsx-a11y": "latest",
+        "eslint-plugin-prettier": "latest",
+        "eslint-plugin-react": "latest",
+        "eslint-plugin-react-hooks": "latest",
+        "file-loader": "latest",
+        "html-webpack-plugin": "latest",
+        "mini-css-extract-plugin": "latest",
+        "mocha": "latest",
+        "node-sass": "latest",
+        "npm-run-all": "latest",
+        "npm-watch": "latest",
+        "portfinder": "latest",
+        "prettier": "latest",
+        "process": "latest",
+        "rimraf": "latest",
+        "sass": "latest",
+        "sass-loader": "latest",
+        "source-map-loader": "latest",
+        "stream-browserify": "latest",
+        "style-loader": "latest",
+        "stylelint": "latest",
+        "stylelint-config-prettier": "latest",
+        "stylelint-config-standard": "latest",
+        "stylelint-scss": "latest",
+        "terser-webpack-plugin": "latest",
+        "util": "latest",
+        "webpack": "latest",
+        "webpack-bundle-analyzer": "latest",
+        "webpack-cli": "latest",
+        "webpack-dev-server": "latest",
+        "webpack-merge": "latest"
+    }
+}
